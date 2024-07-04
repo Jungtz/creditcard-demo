@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset='utf-8'>
+  <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+  <title>CreditCard Demo</title>
+  <meta name='viewport' content='width=device-width, initial-scale=1'>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.6.12/vue.min.js"></script>
+  <script src='creditcard.js'></script>
+</head>
+<body>
+  <div id="app">
+    <credit-card></credit-card>
+  </div>
+  <script>
+    // 單一 vue 檔打包使用方式
+    // Vue.component('star', window.star)
+
+    // 多 vue 檔打包使用方式
+    // Vue.use(window.main)
+    // Vue.use(window.owlting_sms)
+    new Vue({ 
+      el: '#app',
+      components: {
+        CreditCard: window.CreditCard
+      }
+    })
+  </script>
+</body>
+</html>
